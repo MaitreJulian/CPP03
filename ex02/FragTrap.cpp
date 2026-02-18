@@ -6,7 +6,7 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 01:32:03 by julian            #+#    #+#             */
-/*   Updated: 2026/01/14 01:50:26 by julian           ###   ########.fr       */
+/*   Updated: 2026/02/18 19:26:51 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,22 @@ FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
     attackDamage = 30;
     std::cout << "FragTrap " << name << " constructed" << std::endl;
 }
+
+FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other)
+{
+    std::cout << "FragTrap copy constructor called" << std::endl;
+}
+
+FragTrap& FragTrap::operator=(const FragTrap& other)
+{
+    std::cout << "FragTrap copy assignment operator called" << std::endl;
+    if (this != &other)
+    {
+        ClapTrap::operator=(other);
+    }
+    return *this;
+}
+
 void FragTrap::attack(const std::string &target)
 {
     std::cout << "FragTrap " << name << " charge its attack!" << std::endl;

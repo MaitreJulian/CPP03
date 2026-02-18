@@ -6,11 +6,20 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 19:27:22 by julian            #+#    #+#             */
-/*   Updated: 2026/01/13 20:04:38 by julian           ###   ########.fr       */
+/*   Updated: 2026/02/18 19:24:58 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+
+ScavTrap::ScavTrap()
+    : ClapTrap("Default_ScavTrap")
+{
+    hitPoints = 100;
+    energyPoints = 50;
+    attackDamage = 20;
+    std::cout << "ScavTrap " << name << " constructed" << std::endl;
+}
 
 ScavTrap::ScavTrap(const std::string& name)
     : ClapTrap(name)
@@ -20,6 +29,24 @@ ScavTrap::ScavTrap(const std::string& name)
     attackDamage = 20;
     std::cout << "ScavTrap " << name << " constructed" << std::endl;
 }
+
+ScavTrap::ScavTrap(const ScavTrap& other)
+    : ClapTrap(other)
+{
+    std::cout << "ScavTrap copy constructor called" << std::endl;
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap& other)
+{
+    std::cout << "ScavTrap copy assignment operator called" << std::endl;
+    if (this != &other)
+    {
+        ClapTrap::operator=(other);
+    }
+    return *this;
+}
+
+
 void ScavTrap::attack(const std::string &target)
 {
     std::cout << "ScavTrap " << name << " charge its attack!" << std::endl;

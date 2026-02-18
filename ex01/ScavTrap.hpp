@@ -6,7 +6,7 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 19:27:56 by julian            #+#    #+#             */
-/*   Updated: 2026/01/13 19:32:58 by julian           ###   ########.fr       */
+/*   Updated: 2026/02/18 19:18:12 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,17 @@
 
 class ScavTrap : public ClapTrap
 {
-public:
-    // Constructeurs
-    ScavTrap();
-    ScavTrap(const std::string& name);
-    ScavTrap(const ScavTrap& other);
+    public:
 
-    // Opérateur d’affectation
-    ScavTrap& operator=(const ScavTrap& other);
+        ScavTrap();
+        ScavTrap(const std::string& name);
+        ScavTrap(const ScavTrap& other);
+        ScavTrap& operator=(const ScavTrap& other);
+        ~ScavTrap();
 
-    // Destructeur
-    ~ScavTrap();
-
-    // Méthodes
-    void attack(const std::string& target);
-    void guardGate();
+        // Méthodes
+        void attack(const std::string& target);
+        void guardGate();
 };
 
 #endif
