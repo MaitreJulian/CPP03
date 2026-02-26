@@ -21,10 +21,9 @@ ClapTrap::ClapTrap(std::string name)
     attackDamage = 0;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &copy)
+ClapTrap::ClapTrap(const ClapTrap &copy) : name(copy.name), hitPoints(copy.hitPoints), energyPoints(copy.energyPoints), attackDamage(copy.attackDamage)
 {
     std::cout << "Copy constructor called" << std::endl;
-    *this = copy;
 }  
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &copy)
@@ -43,28 +42,28 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &copy)
 void ClapTrap::attack(const std::string &target)
 {
     if (hitPoints != 0 && energyPoints != 0)
-        std::cout << name << " attacks " << target << " and makes " << attackDamage << " dammage" << std::endl;
+        std::cout << "ClapTrap " << name << " attacks " << target << " and makes " << attackDamage << " dammage" << std::endl;
     else if (energyPoints == 0)
-        std::cout << name << " has no more energyPoints left !!" << std::endl;
+        std::cout << "ClapTrap " << name << " has no more energyPoints left !!" << std::endl;
     else
-        std::cout << name << " has no more hitPoints left !!" << std::endl;
+        std::cout << "ClapTrap " << name << " can't attack because it has no more hitPoints left !!" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
     hitPoints -= amount;
-    std::cout << name << " has taken " << amount << " point of damage" << std::endl;
+    std::cout << "ClapTrap " << name << " has taken " << amount << " point of damage" << std::endl;
     if (hitPoints <= 0)
     {
         hitPoints = 0;
-        std::cout << name << " has no more hitPoints left !!" << std::endl;
+        std::cout << "ClapTrap " << name << " has no more hitPoints left !!" << std::endl;
     }
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
     hitPoints += amount;
-    std::cout << name << " is healed and regained  " << amount << " hit points" << std::endl;
+    std::cout << "ClapTrap " << name << " is healed and regained  " << amount << " hit points" << std::endl;
 }
 
 ClapTrap::~ClapTrap()

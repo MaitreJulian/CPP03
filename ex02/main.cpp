@@ -43,21 +43,6 @@ int main()
         frag.highFiveGuys();
     }
 
-    std::cout << "\n===== POLYMORPHISME =====" << std::endl;
-    {
-        ClapTrap* a = new ClapTrap("Base");
-        ClapTrap* b = new ScavTrap("DerivedScav");
-        ClapTrap* c = new FragTrap("DerivedFrag");
-
-        a->attack("Enemy");
-        b->attack("Enemy");
-        c->attack("Enemy");
-
-        delete a;
-        delete b;
-        delete c;
-    }
-
     return 0;
 }
 

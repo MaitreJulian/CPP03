@@ -46,7 +46,6 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other)
     return *this;
 }
 
-
 void ScavTrap::attack(const std::string &target)
 {
     std::cout << "ScavTrap " << name << " charge its attack!" << std::endl;

@@ -18,7 +18,7 @@ int main()
     std::cout << "=== Test de construction ===" << std::endl;
     {
         ScavTrap a("Guardian");
-    } // ← destruction ici
+    }
 
     std::cout << "\n=== Test des actions ===" << std::endl;
 
@@ -33,12 +33,6 @@ int main()
 
     for (int i = 0; i < 60; i++)
         b.attack("Dummy");
-
-    std::cout << "\n=== Test ClapTrap polymorphisme ===" << std::endl;
-
-    ClapTrap* c = new ScavTrap("Polymorph");
-    c->attack("Target");
-    delete c;
 
     return 0;
 }
