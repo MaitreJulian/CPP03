@@ -6,7 +6,7 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 01:32:36 by julian            #+#    #+#             */
-/*   Updated: 2026/01/14 01:41:37 by julian           ###   ########.fr       */
+/*   Updated: 2026/03/01 13:57:43 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 class FragTrap : public ClapTrap
 {
     public :
+        FragTrap();
         FragTrap(const std::string& name);
         FragTrap(const FragTrap& other);
         FragTrap& operator=(const FragTrap& other);

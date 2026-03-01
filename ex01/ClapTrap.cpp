@@ -6,11 +6,17 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 16:28:49 by julian            #+#    #+#             */
-/*   Updated: 2026/02/18 19:11:50 by julian           ###   ########.fr       */
+/*   Updated: 2026/03/01 13:50:17 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap ()
+{
+    std::cout << "Default Claptrap Contructor" <<std::endl;
+    name = "Default Clappy";
+}
 
 ClapTrap::ClapTrap(std::string name)
 {
@@ -42,7 +48,10 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &copy)
 void ClapTrap::attack(const std::string &target)
 {
     if (hitPoints != 0 && energyPoints != 0)
+    {
+        energyPoints--;
         std::cout << "ClapTrap " << name << " attacks " << target << " and makes " << attackDamage << " dammage" << std::endl;
+    }
     else if (energyPoints == 0)
         std::cout << "ClapTrap " << name << " has no more energyPoints left !!" << std::endl;
     else

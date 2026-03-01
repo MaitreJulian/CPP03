@@ -6,7 +6,7 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 19:27:56 by julian            #+#    #+#             */
-/*   Updated: 2026/02/18 19:18:12 by julian           ###   ########.fr       */
+/*   Updated: 2026/03/01 14:01:22 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ class ScavTrap : public ClapTrap
         ScavTrap(const ScavTrap& other);
         ScavTrap& operator=(const ScavTrap& other);
         ~ScavTrap();
-
-        // Méthodes
+        
         void attack(const std::string& target);
         void guardGate();
 };

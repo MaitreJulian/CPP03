@@ -6,7 +6,7 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 16:30:53 by julian            #+#    #+#             */
-/*   Updated: 2026/01/13 19:40:10 by julian           ###   ########.fr       */
+/*   Updated: 2026/03/01 13:48:53 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@
         int hitPoints;
         int energyPoints;
         int attackDamage;
+        
     public:
+        ClapTrap();
         ClapTrap(std::string name);
         ClapTrap(const ClapTrap& other);
         ClapTrap& operator=(const ClapTrap& Other);

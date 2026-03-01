@@ -6,14 +6,14 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 19:27:22 by julian            #+#    #+#             */
-/*   Updated: 2026/02/18 19:24:58 by julian           ###   ########.fr       */
+/*   Updated: 2026/03/01 13:50:53 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap()
-    : ClapTrap("Default_ScavTrap")
+    : ClapTrap("Default Scavy")
 {
     hitPoints = 100;
     energyPoints = 50;

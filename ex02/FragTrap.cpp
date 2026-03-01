@@ -6,11 +6,19 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 01:32:03 by julian            #+#    #+#             */
-/*   Updated: 2026/02/18 19:26:51 by julian           ###   ########.fr       */
+/*   Updated: 2026/03/01 14:00:33 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
+
+FragTrap::FragTrap() : ClapTrap("Default Fraggy")
+{
+    hitPoints = 100;
+    energyPoints = 100;
+    attackDamage = 30;
+    std::cout << "Default FragTrap constructor called" << std::endl;
+}
 
 FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
 {
