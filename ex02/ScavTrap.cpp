@@ -65,4 +65,7 @@ void ScavTrap::guardGate()
     std::cout << "Guarded mode activated!" << std::endl;
 }
 
-ScavTrap::~ScavTrap(){}
+ScavTrap::~ScavTrap()
+{
+    std::cout << "ScavTrap " << name << " destructed" << std::endl;
+}
